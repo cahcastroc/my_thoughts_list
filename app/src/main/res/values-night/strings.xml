@@ -1,6 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My_Thoughts_List</string>
-    <string name="add_thoughts">Add Thoughts</string>
     <string name="o_que_voc_est_pensando">O que você está pensando?</string>
     <string name="insira_o_seu_pensamento">Insira o seu pensamento...</string>
     <string name="deletar_tudo">Deletar tudo</string>

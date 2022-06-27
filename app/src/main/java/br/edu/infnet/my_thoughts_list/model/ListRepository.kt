@@ -14,4 +14,8 @@ class ListRepository (private val listDao: ListDao){
         listDao.insert(listEntity)
     }
 
+    suspend fun deleteAll(){
+        listDao.deleteAll()
+    }
+
 }

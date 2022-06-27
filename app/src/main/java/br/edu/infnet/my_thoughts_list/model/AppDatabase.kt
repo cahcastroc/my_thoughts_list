@@ -53,12 +53,9 @@ abstract class AppDatabase : RoomDatabase() {
 
         suspend fun populateDatabase(listDao: ListDao) {
             listDao.deleteAll()
-            var listEntity = ListEntity("oi")
+            var listEntity = ListEntity("Exemplo: Olá!")
             listDao.insert(listEntity)
-            listEntity = ListEntity("olá")
-            listDao.insert(listEntity)
-            listEntity = ListEntity("tudo bem?")
-            listDao.insert(listEntity)
+
 
 
         }

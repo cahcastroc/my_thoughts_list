@@ -19,8 +19,14 @@ class ListViewModel ( private val repository: ListRepository) : ViewModel() {
         }
     }
 
+    fun deleteAll (){    //----Deleta tudo
+        viewModelScope.launch {
+            repository.deleteAll()
+        }
+    }
 
-    //---No androidx, em algumas situações, não precisa do ViewModelFactory
+
+
     class ListViewModelFactory (private val repository: ListRepository):
             ViewModelProvider.Factory {
 

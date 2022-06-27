@@ -27,11 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
         val etNewThought = findViewById<EditText>(R.id.etNewThought)
+
         val adapter = ThoughtsListAdapter()
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(this)
 
         val btAdd = findViewById<Button>(R.id.btAdd)
+        val btDelete = findViewById<Button>(R.id.btDelete)
 
         btAdd.setOnClickListener {
 
@@ -39,9 +41,15 @@ class MainActivity : AppCompatActivity() {
                 val thought = etNewThought.text.toString()
                 val newThought = ListEntity(thoughts = thought)
                 listViewModel.insert(newThought)
+
+                etNewThought.setText("")
             }else{
                 Toast.makeText(this, "Insira um pensamento", Toast.LENGTH_LONG).show()
             }
+        }
+
+        btDelete.setOnClickListener {
+            listViewModel.deleteAll()
         }
 
         listViewModel.allThoughts.observe(this) { thoughts ->
