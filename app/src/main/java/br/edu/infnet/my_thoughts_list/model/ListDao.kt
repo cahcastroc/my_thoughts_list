@@ -14,8 +14,8 @@ interface ListDao {
     fun getAllThoughts(): Flow<List<ListEntity>>
 
     @Insert
-    suspend fun insert(listEntity: ListEntity)
+     suspend fun insert(listEntity: ListEntity)
 
     @Query("DELETE FROM thoughts_table")
-    suspend fun deleteAll()
+     suspend fun deleteAll()
 }

@@ -5,4 +5,11 @@
     <string name="insira_o_seu_pensamento">Insira o seu pensamento...</string>
     <string name="deletar_tudo">Deletar tudo</string>
     <string name="add">Add</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_que_voc_est_pensando_hoje">No que você está pensando hoje?</string>
+    <string name="registre_o_seu_pensamento">Registre o seu pensamento!</string>
+    <string name="logo_do_aplicativo_com_uma_l_mpada_indicando_pensamento">Logo do aplicativo com uma lãmpada indicando pensamento</string>
+    <string name="insira_o_seu_nome">Insira o seu nome</string>
+    <string name="vamos_come_ar">Vamos Começar!</string>
 </resources>
