@@ -9,4 +9,6 @@
     <string name="logo_do_aplicativo_com_uma_l_mpada_indicando_pensamento">Logo do aplicativo com uma lãmpada indicando pensamento</string>
     <string name="insira_o_seu_nome">Insira o seu nome</string>
     <string name="vamos_come_ar">Vamos Começar!</string>
+    <string name="add_na_lista">Add na lista</string>
+    <string name="textview">TextView</string>
 </resources>

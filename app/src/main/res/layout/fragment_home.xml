@@ -62,7 +62,8 @@
         android:textColorHint="?android:attr/textColorHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btStart"
@@ -72,7 +73,10 @@
         android:background="@drawable/btnapp"
         android:backgroundTint="@color/app1"
         android:text="@string/vamos_come_ar"
-        android:textColor="#212121"
+        android:fontFamily="@font/poppins"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameHome" />
