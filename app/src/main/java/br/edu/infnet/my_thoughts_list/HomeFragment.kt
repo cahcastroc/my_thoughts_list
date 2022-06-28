@@ -27,16 +27,16 @@ class HomeFragment : Fragment() {
 
         btStart.setOnClickListener {
 
-            if(validated(etNameHome)) {
+            if (validated(etNameHome)) {
                 val navController = this.findNavController()
                 val bundle = bundleOf("name" to etNameHome.text.toString())
 
                 navController.navigate(R.id.action_homeFragment_to_seconFragment, bundle)
-            }else{
-                Toast.makeText(activity,"Insira o seu nome no campo indicado", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(activity, "Insira o seu nome no campo indicado", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
-
 
         return view
     }
@@ -44,6 +44,5 @@ class HomeFragment : Fragment() {
     private fun validated(name: EditText): Boolean {
         return name.text.isNotBlank()
     }
-
 
 }

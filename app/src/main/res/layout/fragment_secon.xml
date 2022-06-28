@@ -4,66 +4,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
-
+        <variable
+            name="randomThoughtsViewModel"
+            type="br.edu.infnet.my_thoughts_list.viewmodel.RandomThoughtsViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ECECEC"
-    android:padding="0dp"
-    tools:context=".SeconFragment">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECECEC"
+        android:padding="0dp"
+        tools:context=".SeconFragment">
 
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#92e7b49f"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/cone_com_bal_o_de_pensamento"
-            android:src="@drawable/iconx" />
-
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/textview"
-            android:textAlignment="center"
-            android:textColor="#201E1E"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-        <Button
-            android:id="@+id/btMyList"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/btnapp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/inserir_seus_pensamentos"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:background="#92e7b49f"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btShare" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cone_com_bal_o_de_pensamento"
+                android:src="@drawable/iconx" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/textview"
+                android:textAlignment="center"
+                android:textColor="#201E1E"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
@@ -96,11 +82,29 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <Button
+            android:id="@+id/btRandom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btnapp"
+            android:fontFamily="@font/poppins"
+            android:onClick="@{() -> randomThoughtsViewModel.randomList()}"
+            android:text="@string/gerar_outro_pensamento"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRandom" />
+
+        <Button
             android:id="@+id/btShare"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/btnapp"
             android:fontFamily="@font/poppins"
@@ -110,7 +114,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRandom" />
+            app:layout_constraintTop_toBottomOf="@+id/btRandom" />
+
+        <Button
+            android:id="@+id/btMyList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btnapp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/inserir_seus_pensamentos"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btShare" />
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

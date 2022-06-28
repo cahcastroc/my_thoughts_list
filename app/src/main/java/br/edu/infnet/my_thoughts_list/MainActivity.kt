@@ -37,13 +37,13 @@ class MainActivity : AppCompatActivity() {
 
         btAdd.setOnClickListener {
 
-            if(etNewThought.text.isNotBlank()) {
+            if (etNewThought.text.isNotBlank()) {
                 val thought = etNewThought.text.toString()
                 val newThought = ListEntity(thoughts = thought)
                 listViewModel.insert(newThought)
 
                 etNewThought.setText("")
-            }else{
+            } else {
                 Toast.makeText(this, "Insira um pensamento", Toast.LENGTH_LONG).show()
             }
         }

@@ -1,7 +1,6 @@
 package br.edu.infnet.my_thoughts_list.model
 
 import androidx.annotation.WorkerThread
-import androidx.lifecycle.LiveData
 import kotlinx.coroutines.flow.Flow
 
 class ListRepository (private val listDao: ListDao){
