@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:padding="0dp"
     tools:context=".SeconFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#CF7751"
+        android:background="#92e7b49f"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +26,7 @@
             android:fontFamily="@font/poppins"
             android:text="TextView"
             android:textAlignment="center"
-            android:textColor="#F0E5E5"
+            android:textColor="#201E1E"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -37,7 +39,7 @@
             android:fontFamily="@font/poppins"
             android:text="Registre os seus pensamentos ou compartilhe diretamente com alguém"
             android:textAlignment="center"
-            android:textColor="#F0E5E5"
+            android:textColor="#201E1E"
             android:textSize="16sp" />
 
         <TextView
@@ -50,7 +52,7 @@
             android:fontFamily="@font/poppins"
             android:text="Tudo por aqui. Neste mesmo aplicativo!"
             android:textAlignment="center"
-            android:textColor="#F0E5E5"
+            android:textColor="#201E1E"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -58,7 +60,11 @@
         android:id="@+id/btMyList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="64dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btnapp"
+        android:fontFamily="@font/poppins"
         android:text="Registrar aqui os meus pensamentos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +74,11 @@
         android:id="@+id/btShare"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/btnapp"
+        android:fontFamily="@font/poppins"
         android:text="Compartilhar com alguém os meus pensamentos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

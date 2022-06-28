@@ -6,18 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
 
 
@@ -27,16 +21,28 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-         val btStart = view.findViewById<Button>(R.id.btStart)
+        val btStart = view.findViewById<Button>(R.id.btStart)
+
+        val etNameHome = view.findViewById<EditText>(R.id.etNameHome)
 
         btStart.setOnClickListener {
-            val navController = this.findNavController()
 
-          navController.navigate(R.id.action_homeFragment_to_seconFragment)
+            if(validated(etNameHome)) {
+                val navController = this.findNavController()
+                val bundle = bundleOf("name" to etNameHome.text.toString())
+
+                navController.navigate(R.id.action_homeFragment_to_seconFragment, bundle)
+            }else{
+                Toast.makeText(activity,"Insira o seu nome no campo indicado", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
         return view
+    }
+
+    private fun validated(name: EditText): Boolean {
+        return name.text.isNotBlank()
     }
 
 

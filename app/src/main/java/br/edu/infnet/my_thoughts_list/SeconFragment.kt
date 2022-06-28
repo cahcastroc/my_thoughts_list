@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
 
@@ -21,6 +22,11 @@ class SeconFragment : Fragment() {
         val btMyList = view.findViewById<Button>(R.id.btMyList)
 
         val btShare = view.findViewById<Button>(R.id.btShare)
+
+        val name = arguments?.getString("name")
+
+        val tvName = view.findViewById<TextView>(R.id.tvName)
+        tvName.text = " Olá, $name!!"
 
         btMyList.setOnClickListener {
             val navController = this.findNavController()
